@@ -1,0 +1,208 @@
+@import '../global';
+
+.container {
+  width: $container-width;
+  margin: auto;
+}
+
+$card-padding: 5px;
+$card-boder: 2px solid #ccc;
+$card-width: 250px;
+$card-height: 90px;
+$card-avatar-width: 67.5px;
+$card-avatar-margin: 6px;
+
+@mixin card-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.card {
+  @include card-size($card-width, $card-height);
+  border: $card-boder;
+  padding: $card-padding;
+  text-decoration: none;
+  background: $off-white;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.1s;
+  text-align: left;
+  transition: all 0.2s;
+  &__container {
+    display: flex;
+  }
+  // blocked
+  &__avatar {
+    width: $card-avatar-width;
+    margin-right: $card-avatar-margin;
+    position: relative;
+    &--img {
+        border-radius: 6px;
+        width: 100%;
+        &--edit {
+          border: 2px dashed gray;
+          width: 96%;
+        }
+    }
+    &--input {
+        display: none;
+    }
+  }
+  // blocked
+  &__content {
+    flex:6;
+    // modified
+    &--title {
+      font-size: 19px;
+      letter-spacing: -1px;
+      color: $blue;
+      &--input {
+        // display: inline-block;
+        // width: 100%;
+        width: 100%;
+        border: none;
+        border-bottom: 2px dashed gray;
+        background: $off-white;
+        font-size: 19px;
+        color: $blue;
+        font-weight: 600;
+          &:focus { outline: none; }
+      }
+    }
+    
+    // modified
+    &--department {
+      font-style: italic;
+      color: $gray;
+      padding: 5px 0;
+      font-weight: 600;
+      &--select {
+        font-style: italic;
+        background: $off-white;
+        font-weight: 600;
+        margin: 4px 0;
+        color: $gray;
+        border: none;
+        &:focus { outline: none}
+      }
+    }
+    // modified
+    &--empId {
+      color: $blue;
+      position:relative;
+      display:inline-block;
+      &:after {
+        content:"";
+        position:absolute;
+        left:0;
+        bottom: 1px;
+        right: 0px;
+        margin:auto;
+        background:$blue;
+        height:1.5px;
+      }
+      &--input {
+        color: $blue;
+        border:none;
+        border-bottom: 2px dashed gray;
+        background: $off-white;
+        font-weight: 600;
+        width: 100%;
+        &:focus { outline: none}
+      }
+    }
+    // modified
+    &--email {
+      letter-spacing: -0.5px;
+      font-weight: 600;
+      font-size: 13px;
+      font-style: italic;
+    }
+  }
+  // blocked
+  &__menu {
+    flex:1;
+    width: 20px;
+    display:flex;
+    flex-flow: column;
+  }
+  // blocked
+  &__icon {
+    font-size: 20px;
+    // margin-bottom: 10px;
+    // border-radius: 5px;
+    // @include card-size(20px, 15px);
+    // background: green;
+    z-index: 99;
+  }
+  // blocked
+  &__collapse {
+    position: relative;
+    top: -11px;
+    left: 45.5%;
+    z-index: 99;
+    font-size: 25px;
+    width: 25px;
+    .fa-plus-circle {
+      color: $gray;
+    }
+  }
+  // blocked
+  &__title-id {
+    width: 83%;
+    height: 12px;
+    padding: 2px;
+    background: #0CA2D0;
+    position: absolute;
+    top: 68px;
+    left: 5px;
+    .card-title {
+      float: left;
+      font-size: 10.5px;
+      color: white;
+    }
+
+    .card-id {
+      float: right;
+      font-size: 10.5px;
+      color: white;
+    }
+  }
+  
+}
+
+
+.superior {
+  padding-top: 20px;
+  margin-top: -15px;
+  position: relative;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  
+  &:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+    margin-left: -1px;
+  }
+}
+
+.background-to-click {
+  position: relative;
+  display: inline-block;
+  width: 1000px;
+  height: 1000px;
+  background: rgba(100, 247, 120, 0.829);
+  z-index: 98;
+}
+.border-bottom {
+  height: 13px;
+  border-bottom: 2px dashed rgb(121, 121, 121);
+}

@@ -1,0 +1,54 @@
+<template id="card-edit-template">
+	<a class="card" href="#">
+		<div class="card__container">
+			<div class="card__avatar">
+				<img class="card__avatar--img card__avatar--img--edit" alt="avatar">
+				<div class="card__title-id">
+					<span class="card-title"></span>
+					<span class="card-id"></span>
+				</div>
+				<input type="file" class="card__avatar--input" />
+			</div>
+			<div class="card__content">
+				<input type="text" class="card__content--title--input" />
+				<select class="card__content--department--select">
+					<option value="Management">Management</option>
+					<option value="LexisNexis">LexisNexis</option>
+					<option value="Vonage">Vonage</option>
+					<option value="IT">IT</option>
+					<option value="MarketLive">MarketLive</option>
+				</select>
+				<input type="text" class="card__content--empId--input" />
+				<p class="card__content--email">
+					<small>@kms-technology.com</small>
+				</p>
+			</div>
+			<div class="card__menu">
+				<div class="card__icon card__edit">
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				</div>
+				<div class="card__icon card__add-peer">
+					<i class="fa fa-arrow-right" aria-hidden="true"></i>
+				</div>
+				<div class="card__icon card__add-subordinate">
+					<i class="fa fa-arrow-down" aria-hidden="true"></i>
+				</div>
+				<div class="card__icon card__delete">
+					<i class="fa fa-trash-o" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="card__collapse">
+			<i class="fa fa-minus-circle" aria-hidden="true"></i>
+		</div>
+	</a>
+</template>
+
+<input type="text" class="card__content--title--input" />
+<select class="card__content--department">
+	<option value="Management">Management</option>
+	<option value="LexisNexis">LexisNexis</option>
+	<option value="Vonage">Vonage</option>
+	<option value="MarketLive">MarketLive</option>
+</select>
+<input type="text" class="card__content--empId--input" />

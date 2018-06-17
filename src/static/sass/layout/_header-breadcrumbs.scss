@@ -1,0 +1,47 @@
+$container-width: 100%;
+$breadcrumbs-padding: 10px 0 10px 15px;
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: $off-white;
+    height: 50px;
+    margin-bottom: 20px;
+    z-index: 100;
+}
+
+.breadcrumbs {
+    padding: $breadcrumbs-padding;
+    font-size: 1.5em;
+    font-weight: 600;
+    // blocked
+    &__slash {
+        padding: 0 1px;
+        color: $light-gray;
+    }
+    &__superior {
+        text-decoration: none;
+        color: $blue;
+        letter-spacing: -1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.7em;
+        transition: all 0.5s;
+        &:hover {
+            color: $light-blue;
+            text-decoration: underline;
+        }
+    }
+    &__selected {
+        text-decoration: none;
+        color: $gray;
+        letter-spacing: -1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.7em;
+        transition: all 0.5s;
+        &:hover {
+            color: $light-gray;
+            text-decoration: underline;
+        }
+    }
+}

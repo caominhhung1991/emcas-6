@@ -1,0 +1,32 @@
+<template id="card-root-template">
+    <a class="card" href="#">
+        <div class="card__container">
+            <div class="card__avatar">
+                <img class="card__avatar--img" alt="avatar">
+                <div class="card__title-id">
+                    <span class="card-title"></span>
+                    <span class="card-id"></span>
+                </div>
+            </div>
+            <div class="card__content">
+                <h2 class="card__content--title"></h2>
+                <p class="card__content--department"></p>
+                <h4 class="card__content--empId"></h4>
+                <p class="card__content--email">
+                    <small>@kms-technology.com</small>
+                </p>
+            </div>
+            <div class="card__menu">
+                <div class="card__icon card__edit">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </div>
+                <div class="card__icon card__add-subordinate">
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card__collapse">
+            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+        </div>
+    </a>
+</template>
